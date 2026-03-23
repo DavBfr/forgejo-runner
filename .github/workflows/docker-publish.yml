@@ -25,7 +25,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${DOCKER_IMAGE}
+          images: ${{ env.DOCKER_IMAGE }}
           tags: |
             type=raw,value=12
 
