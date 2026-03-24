@@ -2,8 +2,11 @@
 
 set -e
 
-CONFIG_FILE="/data/config.json"
-RUNNER_FILE="/data/.runner"
+DATA_DIR="/data"
+CONFIG_FILE="$DATA_DIR/config.json"
+RUNNER_FILE="$DATA_DIR/runner.json"
+CACHE_DIR="$DATA_DIR/actcache"
+WS_DIR="$DATA_DIR/act"
 
 apply_config_env_overrides() {
   local has_overrides=false
@@ -83,7 +86,7 @@ cat <<EOF > "$CONFIG_FILE"
    "cache": {
       "enabled": true,
       "port": 0,
-      "dir": "",
+      "dir": "$CACHE_DIR",
       "external_server": "",
       "secret": "",
       "secret_url": "",
@@ -103,7 +106,7 @@ cat <<EOF > "$CONFIG_FILE"
       "force_rebuild": false
    },
    "host": {
-      "workdir_parent": null
+      "workdir_parent": "$WS_DIR"
    },
    "server": {
       "connections": null
