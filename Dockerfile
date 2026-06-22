@@ -1,4 +1,4 @@
-FROM data.forgejo.org/forgejo/runner:12@sha256:a1a2885261a0b8337d4791dd6949651117206741ba66423c24a57c107a64d4a8 AS base
+FROM data.forgejo.org/forgejo/runner:12@sha256:268ad0d1d24bd7ecf2386b7c44e8211398dc014ca81d4fd5fbad96fe79af18f5 AS base
 
 FROM alpine:3@sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b
 
