@@ -25,7 +25,9 @@ permissions:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    container: ghcr.io/renovatebot/renovate:44
+    container:
+      image: ghcr.io/renovatebot/renovate:44
+      options: --user root
     steps:
       - name: Checkout
         uses: actions/checkout@v7
