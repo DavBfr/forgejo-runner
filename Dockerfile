@@ -5,7 +5,7 @@ FROM alpine:3@sha256:be2656061b536c1883c4034790e21d0a09c5aaaf51968b89368a3c0371e
 RUN apk add --no-cache git bash jq
 
 COPY --from=base /bin/forgejo-runner /bin/forgejo-runner
-ADD --chmod=755 entrypoint.sh /bin/entrypoint.sh
+COPY --chmod=755 entrypoint.sh /bin/entrypoint.sh
 
 ENV HOME=/data
 ENV DOCKER_HOST=unix:///var/run/docker.sock
