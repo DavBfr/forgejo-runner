@@ -40,7 +40,7 @@ jobs:
         run: renovate
         env:
           RENOVATE_CONFIG_FILE: .github/renovate.json
-          RENOVATE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
           RENOVATE_GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RENOVATE_PLATFORM: github
           RENOVATE_ENDPOINT: ${{ github.server_url }}

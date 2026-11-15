@@ -3,7 +3,6 @@
   "extends": [
     "config:recommended"
   ],
-  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
   "dependencyDashboard": true,
   "cloneSubmodules": true,
   "assignAutomerge": true,
